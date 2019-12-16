@@ -1,0 +1,62 @@
+
+.page-header {
+  display: table;
+  width: 100%;
+  padding-bottom: 7px;
+  margin: 0 0 15px;
+  clear: both;
+
+}
+h4 {
+  font: 20px Roboto,sans-serif;
+  color: #555;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+h5 {
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  float: right;
+}
+.ng-scope .row:nth-child(2) {
+  margin-top: 50px;
+}
+.head {
+  margin-top: 20px;
+  border-bottom: 1px solid #ddd;
+}
+.md-form {
+  width: 30%;
+  margin-top: -10px;
+  margin-left: 70%;
+  margin-bottom: -10px;
+}
+.col-lg-12 {
+  width: 1200px;
+  margin-left: 50px;
+}
+.fa-pen {
+  color: #3fd67b;
+}
+.row {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.row label:last-child {
+  margin-left: auto;
+}
+.row label:first-child {
+  h5 {
+    margin-right: 50%;
+  }
+}
+h3 {
+  font-size: 26px;
+  font-family: Roboto, sans-serif;
+  font-weight: 600;
+  color: #4e4d4d;
+}
+#page-wrapper {
+  border-left: 1px solid #4e4d4d;
+}

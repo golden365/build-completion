@@ -1,0 +1,68 @@
+<app-header></app-header>
+<!--Section: Live preview-->
+<section class="form-dark">
+
+    <!--Form without header-->
+    <mdb-card style="background-image: url('../../../assets/images/pricing-table7.jpg');">
+        <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
+<!--            <button mdbBtn type="button" class="text-center mb-3 col-md-12" color="success" rounded="true" (click)="openDialog()" outline="true" mdbWavesEffect>NOT A CUSTOMER? CLICK HERE</button>-->
+            <a [routerLink]="['/pages/register-service']" [routerLinkActive]="['router-link-active']" class="nav-link">
+                <button mdbBtn type="button" class="text-center mb-3 col-md-12" color="success" rounded="true" outline="true" mdbWavesEffect>NOT A CUSTOMER? CLICK HERE</button>
+            </a>
+            <!--Header-->
+            <div class="text-center">
+                <h3 class="white-text mb-5 mt-4 font-weight-bold">
+                    <strong>CREATE A NEW</strong>
+                    <a class="green-text font-weight-bold">
+                        <strong> ACCOUNT </strong>
+                    </a>
+                </h3>
+            </div>
+            <button mdbBtn type="button" class="z-depth-1 mb-3 col-sm-12 waves-light" color="secondary" rounded="true" mdbWavesEffect>Sign up with Facebook</button>
+            <!--Body-->
+            <form [formGroup]="darkForm">
+
+
+                <div class="md-form">
+                    <input type="text" id="darkFormEmailEx" class="form-control white-text" formControlName="darkFormEmailEx" mdbInput>
+                    <label for="darkFormEmailEx">Your email</label>
+                </div>
+
+                <div class="md-form pb-3">
+                    <input type="password" id="darkFormCreatePasswordEx" class="form-control white-text" formControlName="darkFormCreatePasswordEx" mdbInput>
+                    <label for="darkFormCreatePasswordEx">Create a Password</label>
+                </div>
+                <div class="md-form pb-3">
+                    <input type="password" id="darkFormConfirmPasswordEx" class="form-control white-text" formControlName="darkFormConfirmPasswordEx" mdbInput>
+                    <label for="darkFormConfirmPasswordEx">Confirm a Password</label>
+                    <input type="radio" class="form-check-input" id="materialInline5"
+                           name="inlineMaterialRadiosExample" mdbInput>
+                    <label class="form-check-label" for="materialInline5">Terms and Conditions</label>
+                </div>
+            </form>
+
+            <!--Grid row-->
+            <div class="row d-flex align-items-center mb-4">
+
+                <!--Grid column-->
+                <div class="text-center mb-3 col-md-12">
+                    <button type="button" mdbBtn color="success" block="true" rounded="true" class="z-depth-1 waves-light" mdbWavesEffect><strong>Sign in</strong></button>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+
+            <!--Grid column-->
+            <div class="col-md-12">
+                <p class="font-small white-text d-flex justify-content-end">Have an account?
+                    <a href="#" class="green-text ml-1 font-weight-bold"> Log in</a>
+                </p>
+            </div>
+            <!--Grid column-->
+
+        </div>
+    </mdb-card>
+
+</section>
+<!--Section: Live preview-->
+<app-footer></app-footer>

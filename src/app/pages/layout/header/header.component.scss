@@ -1,0 +1,24 @@
+//.container-fluid {
+//  background: transparent;
+//}
+//.container-fluid img {
+//  width: 230px;
+//  margin-top: -5px;
+//}
+//a {
+//  color: white !important;
+//  transition: 0.3s linear;
+//}
+//a:hover {
+//  color: #f59317 !important;
+//}
+mdb-navbar links ul li a {
+  font-weight: bold;
+  color: #6963FA;
+  background: transparent;
+}
+mdb-navbar links ul li a:hover {
+  font-weight: 400;
+  color: #ffc107;
+  transition: 0.3s linear;
+}

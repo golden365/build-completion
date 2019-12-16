@@ -1,0 +1,38 @@
+<div id="page-wrapper">
+    <div ui-view class="ng-scope">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <div class="head row">
+                    <label><h4><span> Account Close Reasons </span></h4></label>
+                </div>
+            </div>
+            <label>
+                <button mdbBtn type="button" color="success" rounded="true" outline="true" mdbWavesEffect>
+                    Make New Translations
+                </button>
+            </label>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <table id="topics" class="container">
+                    <thead>
+                    <tr>
+                        <th>Language</th>
+                        <th>Manage</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let data of employees?.data">
+                        <td>Language</td>
+                        <td>
+                            <button mdbBtn type="button" color="primary" rounded="true" mdbWavesEffect>
+                                Manage
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

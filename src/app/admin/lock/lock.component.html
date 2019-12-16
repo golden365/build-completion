@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="list-group list-group-horizontal">
+            <h3>Change Password</h3>
+        </div>
+        <a [routerLink]="['/admin/users']" [routerLinkActive]="['router-link-active']" class="nav-link">
+            <button type="button" mdbBtn color="primary" mdbWavesEffect><i class="fas fa-undo"></i>&nbsp;BACK </button>
+        </a>
+        <div class="md-form input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-default1">Password</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+                   aria-describedby="inputGroupMaterial-sizing-default">
+        </div>
+        <div class="md-form input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-default2">Password Repeat</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+                   aria-describedby="inputGroupMaterial-sizing-default">
+        </div>
+    </div>
+</div>

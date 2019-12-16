@@ -1,0 +1,197 @@
+<!--<nav class="navbar navbar-default">-->
+<!--    <div class="container-fluid">-->
+<!--        <div class="navbar-header">-->
+<!--            <a class="navbar-brand" mdbWavesEffect>-->
+<!--                <img src="../../assets/images/logo.png" style="width: 230px;" alt="LOGO">-->
+<!--            </a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</nav>-->
+
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark cyan" [containerInside]="false">
+    <mdb-navbar-brand>
+        <a class="logo navbar-brand" mdbWavesEffect>
+            <img src="../../assets/images/logo.png" alt="LOGO" style="width: 230px; margin-top: 5px;">
+        </a>
+    </mdb-navbar-brand>
+    <links class="col-lg-12">
+        <ul class="navbar-nav" style="margin-left: auto;">
+            <li class="nav-item active waves-light" mdbWavesEffect>
+                <a [routerLink]="['/pages/home']" [routerLinkActive]="['router-link-active']" class="nav-link"
+                   mdbWavesEffect>
+                    <i class="fas fa-eye"></i>
+                    View Site
+                </a>
+            </li>
+            <li class="nav-item active waves-light" mdbWavesEffect>
+                <mat-menu #Menu="matMenu">
+                    <a [routerLink]="['/pages/home']" [routerLinkActive]="['router-link-active']"
+                       class="nav-link waves-light" mdbWavesEffect>
+                        <i class="fas fa-power-off"></i>
+                        Logout
+                    </a>
+                </mat-menu>
+
+                <button mat-icon-button [matMenuTriggerFor]="Menu" class="navbar-nav ml-auto" style="color: #ffffff;">
+                    <i class="fas fa-power-off"></i>
+                </button>
+            </li>
+        </ul>
+    </links>
+</mdb-navbar>
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="navbar-header">
+            <h3>OndemandService</h3>
+        </div>
+
+        <ul class="list-unstyled components rounded mb-0" id="accordian">
+            <li class="active">
+                <a [routerLink]="['/admin/dashboard']" [routerLinkActive]="['router-link-active']"
+                   data-toggle="collapse" aria-expanded="false" mdbWavesEffect>
+                    <i class="fa fa-home fa-fw ng-scope"></i>
+                    Dashboard
+                </a>
+            </li>
+            <li class="active">
+                <a href="#usersSubmenu" data-toggle="collapse" aria-expanded="false" mdbWavesEffect>
+                    <i class="fa fa-users fa-fw ng-scope"></i>
+                    Users<i class="fa fa-angle-right float-right"></i>
+                </a>
+                <ul class="collapse list-unstyled" id="usersSubmenu" data-parent="#accordian">
+                    <li><a [routerLink]="['/admin/users']" [routerLinkActive]="['router-link-active']" mdbWavesEffect>Service
+                        Provider</a></li>
+                    <li><a [routerLink]="['/admin/customers']" [routerLinkActive]="['router-link-active']"
+                           mdbWavesEffect>Customers</a></li>
+                    <li><a [routerLink]="['/admin/administrators']" [routerLinkActive]="['router-link-active']"
+                           mdbWavesEffect>Administrators</a></li>
+                    <li><a [routerLink]="['/admin/addnewuser']" [routerLinkActive]="['router-link-active']"
+                           mdbWavesEffect>Add New User</a></li>
+                    <li><a [routerLink]="['/admin/userlogins']" [routerLinkActive]="['router-link-active']"
+                           mdbWavesEffect>User Logins</a></li>
+                    <li><a [routerLink]="['/admin/contacts']" [routerLinkActive]="['router-link-active']"
+                           mdbWavesEffect>Contacts</a></li>
+                    <li><a [routerLink]="['/admin/blockedusers']" [routerLinkActive]="['router-link-active']"
+                           mdbWavesEffect>Blocked Users</a></li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#listingsSubmenu" data-toggle="collapse" aria-expanded="false" aria-controls="listingsSubmenu">
+                    <i class="fa fa-users fa-fw ng-scope"></i>
+                    Listings<i class="fa fa-angle-right float-right"></i>
+                </a>
+                <ul class="collapse list-unstyled" id="listingsSubmenu" data-parent="#accordian">
+                    <li><a [routerLink]="['/admin/listings']" [routerLinkActive]="['router-link-active']"
+                           mdbWavesEffect>Listings</a></li>
+                    <li><a [routerLink]="['/admin/listing-views']" [routerLinkActive]="['router-link-active']"
+                           mdbWavesEffect>Listing Views</a></li>
+                    <li><a [routerLink]="['/admin/listing-favorites']" [routerLinkActive]="['router-link-active']"
+                           mdbWavesEffect>Listing-Favorites</a></li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#bookingsSubmenu" data-toggle="collapse" aria-expanded="false" aria-controls="bookingsSubmenu">
+                    <i class="fa fa-users fa-fw ng-scope"></i>
+                    Bookings<i class="fa fa-angle-right float-right"></i>
+                </a>
+                <ul class="collapse list-unstyled" id="bookingsSubmenu" data-parent="#accordian">
+                    <li><a [routerLink]="['/admin/bookings']" [routerLinkActive]="['router-link-active']"
+                           mdbWavesEffect>Bookings</a></li>
+                    <li><a [routerLink]="['/admin/messages']" [routerLinkActive]="['router-link-active']"
+                           mdbWavesEffect>Messages</a></li>
+                    <li><a [routerLink]="['/admin/reviews']" [routerLinkActive]="['router-link-active']"
+                           mdbWavesEffect>Reviews</a></li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#paymentsSubmenu" data-toggle="collapse" aria-expanded="false">
+                    <i class="fa fa-users fa-fw ng-scope"></i>
+                    Payments<i class="fa fa-angle-right float-right"></i>
+                </a>
+                <ul class="collapse list-unstyled" id="paymentsSubmenu" data-parent="#accordian">
+                    <li><a [routerLink]="['/admin/credit-cards']" [routerLinkActive]="['router-link-active']"
+                           mdbWavesEffect>Credit Cards</a></li>
+                    <li><a [routerLink]="['/admin/payment-gateways']" [routerLinkActive]="['router-link-active']"
+                           mdbWavesEffect>Payment Gateways</a></li>
+                    <li><a [routerLink]="['/admin/transactions']" [routerLinkActive]="['router-link-active']"
+                           mdbWavesEffect>Transactions</a></li>
+                    <li><a [routerLink]="['/admin/withdraw_requests']" [routerLinkActive]="['router-link-active']"
+                           mdbWavesEffect>Withdraw Requests</a></li>
+                    <li><a [routerLink]="['/admin/money-transfer']" [routerLinkActive]="['router-link-active']"
+                           mdbWavesEffect>Money Transfer Accounts</a></li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#requestsSubmenu" data-toggle="collapse" aria-expanded="false">
+                    <i class="fa fa-users fa-fw ng-scope"></i>
+                    Requests<i class="fa fa-angle-right float-right"></i>
+                </a>
+                <ul class="collapse list-unstyled" id="requestsSubmenu" data-parent="#accordian">
+                    <li><a [routerLink]="['/admin/requests']" [routerLinkActive]="['router-link-active']"
+                           mdbWavesEffect>Requests</a></li>
+                    <li><a [routerLink]="['/admin/responses']" [routerLinkActive]="['router-link-active']"
+                           mdbWavesEffect>Responses</a></li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#onlineSubmenu" data-toggle="collapse" aria-expanded="false">
+                    <i class="fa fa-users fa-fw ng-scope"></i>
+                    Online Assessment<i class="fa fa-angle-right float-right"></i>
+                </a>
+                <ul class="collapse list-unstyled" id="onlineSubmenu" data-parent="#accordian">
+                    <li><a [routerLink]="['/admin/topics']" [routerLinkActive]="['router-link-active']"
+                           mdbWavesEffect>Topics</a></li>
+                    <li><a [routerLink]="['/admin/questions']" [routerLinkActive]="['router-link-active']"
+                           mdbWavesEffect>Questions</a></li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#settingsSubmenu" data-toggle="collapse" aria-expanded="false">
+                    <i class="fa fa-users fa-fw ng-scope"></i>
+                    Settings<i class="fa fa-angle-right float-right"></i>
+                </a>
+                <ul class="collapse list-unstyled" id="settingsSubmenu" data-parent="#accordian">
+                    <li><a [routerLink]="['/admin/site-settings']" [routerLinkActive]="['router-link-active']" mdbWavesEffect>Site
+                        Settings</a></li>
+                    <li><a [routerLink]="['/admin/providers']" [routerLinkActive]="['router-link-active']" mdbWavesEffect>Providers</a>
+                    </li>
+                    <li><a [routerLink]="['/admin/service-locations']" [routerLinkActive]="['router-link-active']" mdbWavesEffect>Service
+                        Locations</a></li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#pluginsSubmenu" data-toggle="collapse" aria-expanded="false">
+                    <i class="fa fa-users fa-fw ng-scope"></i>
+                    Plugins<i class="fa fa-angle-right float-right"></i>
+                </a>
+                <ul class="collapse list-unstyled" id="pluginsSubmenu" data-parent="#accordian">
+                    <li><a [routerLink]="['/admin/plugins']" [routerLinkActive]="['router-link-active']" mdbWavesEffect>Plugins</a></li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#masterSubmenu" data-toggle="collapse" aria-expanded="false">
+                    <i class="fa fa-users fa-fw ng-scope"></i>
+                    Master<i class="fa fa-angle-right float-right"></i>
+                </a>
+                <ul class="collapse list-unstyled" id="masterSubmenu" data-parent="#accordian">
+                    <li><a [routerLink]="['/admin/categories']" [routerLinkActive]="['router-link-active']" mdbWavesEffect>Categories</a></li>
+                    <li><a [routerLink]="['/admin/services']" [routerLinkActive]="['router-link-active']" mdbWavesEffect>Services</a></li>
+                    <li><a [routerLink]="['/admin/accountclose']" [routerLinkActive]="['router-link-active']" mdbWavesEffect>Account Close Reasons</a></li>
+                    <li><a [routerLink]="['/admin/cancellationpolicies']" [routerLinkActive]="['router-link-active']" mdbWavesEffect>Cancellation Policies</a></li>
+                    <li><a [routerLink]="['/admin/faqs']" [routerLinkActive]="['router-link-active']" mdbWavesEffect>FAQs</a></li>
+                    <li><a [routerLink]="['/admin/cities']" [routerLinkActive]="['router-link-active']" mdbWavesEffect>Cities</a></li>
+                    <li><a [routerLink]="['/admin/states']" [routerLinkActive]="['router-link-active']" mdbWavesEffect>States</a></li>
+                    <li><a [routerLink]="['/admin/countries']" [routerLinkActive]="['router-link-active']" mdbWavesEffect>Countries</a></li>
+                    <li><a [routerLink]="['/admin/languages']" [routerLinkActive]="['router-link-active']" mdbWavesEffect>Languages</a></li>
+                    <li><a [routerLink]="['/admin/emailtemplate']" [routerLinkActive]="['router-link-active']" mdbWavesEffect>Email Templates</a></li>
+                    <li><a [routerLink]="['/admin/translations']" [routerLinkActive]="['router-link-active']" mdbWavesEffect>Translations</a></li>
+                    <li><a [routerLink]="['/admin/pages']" [routerLinkActive]="['router-link-active']" mdbWavesEffect>Pages</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </nav>
+    <router-outlet></router-outlet>
+
+</div>

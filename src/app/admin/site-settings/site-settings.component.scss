@@ -1,0 +1,83 @@
+mdb-card {
+  horiz-align: center;
+  display: inline-block;
+  min-width: 40%;
+  text-align: center;
+  height: 110px;
+  margin-top: 30px;
+}
+
+.container-fluid .list-group .list-inline .list-inline-item mdb-card div .col-xs-4 {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  line-height: 70px;
+  text-align: center;
+  background: #ffb61c;
+  overflow: hidden;
+  margin-top: 18px;
+  margin-left: 35px;
+  position: absolute;
+}
+
+.list-inline .list-inline-item {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.container-fluid .title h3 {
+  font: 20px Roboto, sans-serif;
+  color: #555;
+  font-weight: 400;
+  margin-bottom: 12px;
+  margin-top: 50px;
+  border-bottom: 1px solid #9e9e9d;
+}
+
+h5 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+}
+
+li h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.42857143;
+  color: #333;
+  margin-right: -30px;
+  margin-top: 5px;
+  padding-left: 73px;
+}
+
+.row {
+  .number {
+    display: inline-block;
+    text-align: center;
+    margin-left: 57px;
+    margin-top: 20px;
+  }
+
+  .description {
+    display: inline-block;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: -30px;
+  }
+}
+
+.list-group {
+  background: #2121;
+}
+
+.container-fluid .list-group ul li {
+  display: inline;
+  margin-top: 30px;
+}
+i {
+  line-height: 2;
+}
+form {
+  margin-left: 70%;
+}

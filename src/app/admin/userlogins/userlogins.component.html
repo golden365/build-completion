@@ -1,0 +1,78 @@
+<div id="page-wrapper">
+    <div ui-view class="ng-scope">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4><span> User Logins </span></h4>
+                <div class="row">
+                    <label>
+                        <button mat-button [matMenuTriggerFor]="menu">Add Filter &nbsp;<i class="fas fa-angle-down"></i>
+                        </button>
+                        <mat-menu #menu="matMenu">
+                            <button mat-menu-item>User</button>
+                        </mat-menu>
+                    </label>
+                </div>
+            </div>
+            <div class="input">
+                <div class="md-form">
+                    <input mdbInput type="text" id="form1" class="form-control">
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <table id="serviceprovider" class="container">
+                    <thead>
+                    <tr>
+                        <th>
+                            <input type="checkbox" ng-model="all">
+                        </th>
+                        <th>ID</th>
+                        <th>Service Provider</th>
+                        <th>Category</th>
+                        <th>Bookings</th>
+                        <th>Logins</th>
+                        <th>Available Revenue Amount</th>
+                        <th>Total Earmed Amount</th>
+                        <th>Site Revenue</th>
+                        <th>AVG Rating</th>
+                        <th>Available Referral Amount</th>
+                        <th>Top Listed User?</th>
+                        <th>Pro User?</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let data of employees?.data">
+                        <td>
+                            <input type="checkbox" ng-checked="all">
+                        </td>
+                        <td>
+                            {{data.id}}
+                        </td>
+                        <td>
+                            {{data.username}}<br>
+                            <i class="fas fa-envelope-open-text"></i><br>
+                            {{data.email}}<br>
+                            {{data.phone_number}}
+                        </td>
+                        <td>{{data.category}}</td>
+                        <td>Bookings</td>
+                        <td>Logins</td>
+                        <td>Available Revenue Amount</td>
+                        <td>Total Earmed Amount</td>
+                        <td>Site Revenue</td>
+                        <td>AVG Rating</td>
+                        <td>Available Referral Amount</td>
+                        <td>Top Listed User?</td>
+                        <td>Pro User?</td>
+                        <td>
+                            <a [routerLink]="['/admin/remove']" [routerLinkActive]="['router-link-active']">
+                                <i class="fas fa-trash-alt" mdbWavesEffect></i>
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

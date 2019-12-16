@@ -1,0 +1,94 @@
+<div id="page-wrapper">
+    <div ui-view class="ng-scope">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <div class="head row">
+                    <label><h4><span> Services </span></h4></label>
+                    <label>
+                        <button mat-button [matMenuTriggerFor]="menu">Add Filter &nbsp;<i class="fas fa-angle-down"></i>
+                        </button>
+                        <mat-menu #menu="matMenu">
+                            <button mat-menu-item>Category</button>
+                            <button mat-menu-item>Booking Option</button>
+                            <button mat-menu-item>Parent</button>
+                            <button mat-menu-item>Active?</button>
+                            <button mat-menu-item>Featured?</button>
+                        </mat-menu>
+                        <button mdbBtn type="button" color="success" rounded="true" outline="true" mdbWavesEffect>
+                            Create
+                        </button>
+                    </label>
+                </div>
+            </div>
+            <div class="md-form">
+                <input mdbInput type="text" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <table id="questions" class="container">
+                    <thead>
+                    <tr>
+                        <th>
+                            <input type="checkbox" ng-model="all">
+                        </th>
+                        <th>ID</th>
+                        <th>Category</th>
+                        <th>Name</th>
+                        <th>Booking Option</th>
+                        <th>Icon Class</th>
+                        <th>Enable Multiple Booking?</th>
+                        <th>Allow choose number of Items</th>
+                        <th>Label for Number of Item</th>
+                        <th>Maximum Number To Allow</th>
+                        <th>Multiply Booking Amount When Choosing Number Of Items?</th>
+                        <th>Icon Class</th>
+                        <th>Featured?</th>
+                        <th>Active?</th>
+                        <th>Created On</th>
+                        <th>Required service location when booking?</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let data of employees?.data">
+                        <td>
+                            <input type="checkbox" ng-checked="all">
+                        </td>
+                        <td>
+                            {{data.id}}
+                        </td>
+                        <td>
+                            {{data.category}}
+                        </td>
+                        <td>{{data.name}}</td>
+                        <td>Booking option</td>
+                        <td>fa-user-md</td>
+                        <td>enable multiple bookiing</td>
+                        <td>number</td>
+                        <td>label for</td>
+                        <td>Maximum</td>
+                        <td>multiply</td>
+                        <td>Icon Class</td>
+                        <td>Featured?</td>
+                        <td>Active</td>
+                        <td>created on</td>
+                        <td>required service</td>
+                        <td>
+                            <a [routerLink]="['/admin/edit']" [routerLinkActive]="['router-link-active']">
+                                <i class="fas fa-pen" mdbWavesEffect></i>
+                            </a>
+                            <a [routerLink]="['/admin/view']" [routerLinkActive]="['router-link-active']">
+                                <i class="fas fa-eye" style="color: #000;" mdbWavesEffect></i>
+                            </a>
+                            <a [routerLink]="['/admin/remove']" [routerLinkActive]="['router-link-active']">
+                                <i class="fas fa-trash-alt" mdbWavesEffect></i>
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+mdb-card {
+  horiz-align: center;
+  display: inline-block;
+  min-width: 350px;
+  text-align: center;
+  height: 90px;
+}
+.container-fluid .list-group .list-inline .list-inline-item mdb-card div .col-xs-4 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  line-height: 70px;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 15px;
+  margin-left: 20%;
+}
+
+.list-inline .list-inline-item {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.container-fluid .title h3 {
+  font: 20px Roboto,sans-serif;
+  color: #555;
+  font-weight: 400;
+  margin-bottom: 12px;
+  margin-top: 50px;
+  border-bottom: 1px solid #9e9e9d;
+}
+h5 {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+}
+.row {
+  .number {
+    display: inline-block;
+    text-align: center;
+    margin-left: 57px;
+    margin-top: 20px;
+  }
+  .description {
+    display: inline-block;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: -30px;
+  }
+}
+.list-group {
+  background: #2121;
+}

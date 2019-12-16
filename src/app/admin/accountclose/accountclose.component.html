@@ -1,0 +1,61 @@
+<div id="page-wrapper">
+    <div ui-view class="ng-scope">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <div class="head row">
+                    <label><h4><span> Account Close Reasons </span></h4></label>
+                    <label>
+                        <button mdbBtn type="button" color="success" rounded="true" outline="true" mdbWavesEffect>
+                            Create
+                        </button>
+                    </label>
+                </div>
+            </div>
+            <div class="md-form">
+                <input mdbInput type="text" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <table id="topics" class="container">
+                    <thead>
+                    <tr>
+                        <th>
+                            <input type="checkbox" ng-model="all">
+                        </th>
+                        <th>ID</th>
+                        <th>Reasons</th>
+                        <th>Created On</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let data of employees?.data">
+                        <td>
+                            <input type="checkbox" ng-checked="all">
+                        </td>
+                        <td>
+                            {{data.id}}
+                        </td>
+                        <td>
+                            {{data.username}}<br>
+                        </td>
+                        <td>created on</td>
+                        <td>
+                            <a [routerLink]="['/admin/edit']" [routerLinkActive]="['router-link-active']">
+                                <i class="fas fa-pen" mdbWavesEffect></i>
+                            </a>
+                            <a [routerLink]="['/admin/view']" [routerLinkActive]="['router-link-active']">
+                                <i class="fas fa-eye" style="color: #000;" mdbWavesEffect></i>
+                            </a>
+                            <a [routerLink]="['/admin/remove']" [routerLinkActive]="['router-link-active']">
+                                <i class="fas fa-trash-alt" mdbWavesEffect></i>
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

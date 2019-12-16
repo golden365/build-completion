@@ -1,0 +1,54 @@
+<!--<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">-->
+<!--    <div class="container-fluid">-->
+<!--        <a class="navbar-brand" href="#"><img src="../../../assets/images/logo.png" alt="Logo"-->
+<!--                                              style="margin-top: -5px; width: 230px;"></a>-->
+<!--        <ul class="navbar-nav">-->
+<!--            <li class="nav-item" mdbWavesEffect>-->
+<!--                <a routerLink="/pages/howitworks" class="nav-link" routerLinkActive="active">-->
+<!--                    How it Works-->
+<!--                </a>-->
+<!--            </li>-->
+<!--            <li class="nav-item" mdbWavesEffect>-->
+<!--                <a routerLink="/pages/login" class="nav-link" routerLinkActive="active">-->
+<!--                    <i class="fa fa-sign-in fa-lg fa-fw"></i>Login-->
+<!--                </a>-->
+<!--            </li>-->
+<!--            <li class="nav-item" mdbWavesEffect>-->
+<!--                <a routerLink="/pages/register" class="nav-link" routerLinkActive="active">-->
+<!--                    <i class="fa fa-user fa-lg fa-fw"></i>Register-->
+<!--                </a>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--</nav>-->
+
+<mdb-navbar SideClass="navbar fixed-top navbar-expand-sm navbar-dark scrolling-navbar" [containerInside]="false">
+    <mdb-navbar-brand>
+        <a class="logo navbar-brand" href="#">
+            <img src="../../../../assets/images/logo.png" alt="LOGO" mdbWavesEffect style="margin-top: -5px; width: 230px; margin-bottom: -10px;">
+        </a>
+    </mdb-navbar-brand>
+    <links>
+        <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav">
+            <li class="nav-item active waves-light" mdbWavesEffect>
+                <a routerLink="/pages/howitworks" routerLinkActive="active" class="nav-link">How it Works
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item waves-light" mdbWavesEffect>
+                <a routerLink="/pages/login" class="nav-link" routerLinkActive="active">Login</a>
+            </li>
+            <li class="nav-item dropdown" dropdown>
+                <a dropdownToggle type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+                    <mdb-icon fas icon="user"></mdb-icon>Register<span class="caret"></span></a>
+                <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+                    <a class="dropdown-item waves-light" mdbWavesEffect routerLink="/pages/register">Sign up as Customer</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect routerLink="/pages/register-service">Sign up as Service Provider</a>
+                </div>
+            </li>
+<!--            <li class="nav-item waves-light" mdbWavesEffect>-->
+<!--                <a routerLink="/pages/register" class="nav-link" routerLinkActive="active">Register</a>-->
+<!--            </li>-->
+        </ul>
+    </links>
+</mdb-navbar>

@@ -1,0 +1,35 @@
+.footer {
+  background: #212121;
+  padding: 15px 10px;
+  border-top: 1px solid #69636a;
+  color: white;
+}
+.footer-bellow {
+  display: inline-block;
+  width: 100%;
+  border-top: 1px solid #69636a;
+  background: #212121;
+  height: 51px !important;
+  color: #9e9e9d;
+  padding-top: 10px;
+  padding-left: 30px;
+  li:before {
+    content: '';
+  }
+  .row {
+    ul {
+      cursor: pointer;
+      float: right !important;
+    }
+    .pull-right {
+      float: right;
+    }
+  }
+}
+.col-sm-3 img {
+  margin-left: -25px;
+  width: 125px;
+}
+.float-right {
+  margin: auto;
+}

@@ -1,0 +1,273 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-5 map-width">
+            <div class="form-group">
+                <div class="checkbox-field">
+                    <input type="checkbox" name="love" value="love" id="love">
+                    <label for="love">Search When I Move the Map</label>
+                </div>
+            </div>
+            <agm-map [latitude]="latitude" [longitude]="longitude" style="height: 300px"
+                     (mapClick)="placeMarker($event)">
+                <agm-marker *ngFor="let marker of markers" [latitude]="marker.latitude"
+                            [longitude]="marker.longitude"></agm-marker>
+            </agm-map>
+        </div>
+        <div class="col-sm-7 search-responsive">
+            <div class="search-result clearfix">
+                <section>
+                    <div class="sub-list">
+                        <a>
+                            <mdb-icon fas icon="angle-double-left"></mdb-icon>
+                            See all services</a>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="all">
+                                <form class="clearfix home-search form-inline ng-pristine ng-valid"
+                                      name="homeSearchForm">
+                                    <div class="form-group has-feedback speciality">
+                                        <form class="example-form">
+                                            <mat-form-field class="example-full-width">
+                                                <input type="text" placeholder="Search by City" aria-label="Assignee"
+                                                       matInput [formControl]="myControl" [matAutocomplete]="auto">
+                                                <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                                                    <mat-option *ngFor="let option of filteredOptions | async"
+                                                                [value]="option">
+                                                        {{option.name}}
+                                                    </mat-option>
+                                                </mat-autocomplete>
+                                            </mat-form-field>
+                                        </form>
+                                    </div>
+                                    <mat-checkbox [formControl]="disableSelect">Disable</mat-checkbox>
+                                    <div class="clearfix has-feedback speciality">
+                                        <mat-form-field>
+                                            <mat-label>Choose an option</mat-label>
+                                            <mat-select [disabled]="disableSelect.value">
+                                                <mat-option value="option1">Option 1</mat-option>
+                                                <mat-option value="option2" disabled>Option 2 (disabled)</mat-option>
+                                                <mat-option value="option3">Option 3</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="clearfix ha  s-feedback speciality">
+                                        <mat-form-field>
+                                            <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                            <mat-datepicker #picker></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="checkbox col-sm-12">
+                                        <mat-radio-group aria-label="Select an option">
+                                            <mat-radio-button value="1">Dog Day Care</mat-radio-button>
+                                            <mat-radio-button value="2">Dog Working</mat-radio-button>
+                                            <mat-radio-button value="3">Dog Boarding</mat-radio-button>
+                                        </mat-radio-group>
+                                    </div>
+                                    <div class="service">
+                                        <button mdbBtn color="primary" class="waves-light" type="button"
+                                                (click)="test.toggle()" mdbWavesEffect>
+                                            More Filters
+                                        </button>
+
+                                        <div mdbCollapse [isCollapsed]="true" #test="bs-collapse">
+                                            <mat-form-field class="col-sm-12">
+                                                <mat-label>Language you can speak?</mat-label>
+                                                <mat-select disableRipple>
+                                                    <mat-option value="1">Danish</mat-option>
+                                                    <mat-option value="2">Dutch</mat-option>
+                                                    <mat-option value="2">English</mat-option>
+                                                    <mat-option value="2">German</mat-option>
+                                                    <mat-option value="2">French</mat-option>
+                                                    <mat-option value="2">Italian</mat-option>
+                                                    <mat-option value="2">Portuguese</mat-option>
+                                                    <mat-option value="2">Spanish</mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                            <div class="col-sm-12">
+                                                <mat-radio-group aria-label="option1">
+                                                    <label style="margin-right: 20%;">Do you have a car?</label>
+                                                    <mat-radio-button value="1">Yes</mat-radio-button>
+                                                    <mat-radio-button value="2">No</mat-radio-button>
+                                                </mat-radio-group>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <mat-radio-group aria-label="option2">
+                                                    <label style="margin-right: 12.3%;">Are you willing to drive
+                                                        dhildren?</label>
+                                                    <mat-radio-button value="3">Yes</mat-radio-button>
+                                                    <mat-radio-button value="4">No</mat-radio-button>
+                                                </mat-radio-group>
+                                            </div>
+                                            <mat-form-field class="col-sm-12">
+                                                <mat-label>Property type</mat-label>
+                                                <mat-select disableRipple>
+                                                    <mat-option value="1">Apartment</mat-option>
+                                                    <mat-option value="2">House</mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                            <mat-form-field class="col-sm-12">
+                                                <mat-label>Outdoor areas</mat-label>
+                                                <mat-select disableRipple>
+                                                    <mat-option value="1">Balcony</mat-option>
+                                                    <mat-option value="2">Garden</mat-option>
+                                                    <mat-option value="2">Terrace/Patio</mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                            <mat-form-field class="col-sm-12">
+                                                <mat-label>Resident dogs</mat-label>
+                                                <mat-select disableRipple>
+                                                    <mat-option value="1">One</mat-option>
+                                                    <mat-option value="2">Two</mat-option>
+                                                    <mat-option value="2">Three</mat-option>
+                                                    <mat-option value="2">Four</mat-option>
+                                                    <mat-option value="2">Five</mat-option>
+                                                    <mat-option value="2">Six</mat-option>
+                                                    <mat-option value="2">Seven</mat-option>
+                                                    <mat-option value="2">Eight</mat-option>
+                                                    <mat-option value="2">Nine</mat-option>
+                                                    <mat-option value="2">Ten</mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                            <mat-form-field class="col-sm-12">
+                                                <mat-label>Years of experience caring for dogs</mat-label>
+                                                <mat-select disableRipple>
+                                                    <mat-option value="1">Less of than 2 years</mat-option>
+                                                    <mat-option value="2">2 to 5 years</mat-option>
+                                                    <mat-option value="2">More than 5 years</mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                            <mat-form-field class="col-sm-12">
+                                                <mat-label>Others</mat-label>
+                                                <mat-select disableRipple>
+                                                    <mat-option value="1">Dog care is my primary occupation</mat-option>
+                                                    <mat-option value="2">I have a car for emergencies</mat-option>
+                                                    <mat-option value="2">I can administer oral medication</mat-option>
+                                                    <mat-option value="2">I can administer injections</mat-option>
+                                                    <mat-option value="2">I am dog CPR/first aid certified</mat-option>
+                                                    <mat-option value="2">I have children under 18 in the hoursehold
+                                                    </mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <div ng-show="showLoader" class="ng-hide" style=""><img
+                                            width="100" height="100"
+                                            src="" alt="loader"></div>
+                                    <span>
+                                        <button mdbBtn color="warning" class="waves-light" type="button"
+                                                mdbWavesEffect>
+                                        Search
+                                    </button>
+                                    </span>
+                                </form>
+                                <div class="clearfix hor-space-10 justify-content-end">
+                                    <label>
+                                        <button mat-button [matMenuTriggerFor]="menu" style="float: right;">Sort by:
+                                            Suggested &nbsp;<i class="fas fa-angle-down"></i>
+                                        </button>
+                                        <mat-menu #menu="matMenu">
+                                            <button mat-menu-item> Suggested</button>
+                                            <button mat-menu-item> Reviews</button>
+                                        </mat-menu>
+                                    </label>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <mdb-card cascade="true" narrower="true">
+                                            <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+                                                <mdb-card-img
+                                                        src="../../../assets/images/listing_thumb/ListingPhoto/dog-anna.png">
+                                                </mdb-card-img>
+                                                <mdb-icon far icon="heart fa-2x"></mdb-icon>
+                                                <a>
+                                                    <div class="mask rgba-white-slight"></div>
+                                                </a>
+                                            </div>
+                                            <mdb-card-body cascade="true" class="text-center pb-0 px-0">
+                                                <div class="content">
+
+                                                </div>
+                                            </mdb-card-body>
+                                        </mdb-card>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <mdb-card cascade="true" narrower="true">
+                                            <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+                                                <mdb-card-img
+                                                        src="../../../assets/images/listing_thumb/ListingPhoto/dog-boarding.png"></mdb-card-img>
+                                                <mdb-icon far icon="heart fa-2x"></mdb-icon>
+                                                <a>
+                                                    <div class="mask rgba-white-slight"></div>
+                                                </a>
+                                            </div>
+                                            <mdb-card-body cascade="true" class="text-center pb-0 px-0">
+                                                <mdb-card-text>
+                                                    Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium
+                                                    doloremque laudantium, totam rem
+                                                    aperiam.
+                                                </mdb-card-text>
+                                                <div class="card-footer text-muted text-center mt-4">
+                                                    2 days ago
+                                                </div>
+                                            </mdb-card-body>
+                                        </mdb-card>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <mdb-card cascade="true" narrower="true">
+                                            <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+                                                <mdb-card-img
+                                                        src="../../../assets/images/listing_thumb/ListingPhoto/dog-working.png"></mdb-card-img>
+                                                <mdb-icon far icon="heart fa-2x"></mdb-icon>
+                                                <a>
+                                                    <div class="mask rgba-white-slight"></div>
+                                                </a>
+                                            </div>
+                                            <mdb-card-body cascade="true" class="text-center pb-0 px-0">
+                                                <mdb-card-text>
+                                                    Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium
+                                                    doloremque laudantium, totam rem
+                                                    aperiam.
+                                                </mdb-card-text>
+                                                <div class="card-footer text-muted text-center mt-4">
+                                                    2 days ago
+                                                </div>
+
+                                            </mdb-card-body>
+                                        </mdb-card>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <mdb-card cascade="true" narrower="true">
+                                            <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+                                                <mdb-card-img
+                                                        src="../../../assets/images/listing_thumb/ListingPhoto/walking.png"></mdb-card-img>
+                                                <mdb-icon far icon="heart fa-2x"></mdb-icon>
+                                                <a>
+                                                    <div class="mask rgba-white-slight"></div>
+                                                </a>
+                                            </div>
+                                            <mdb-card-body cascade="true" class="text-center pb-0 px-0">
+                                                <mdb-card-text>
+                                                    Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium
+                                                    doloremque laudantium, totam rem
+                                                    aperiam.
+                                                </mdb-card-text>
+                                                <div class="card-footer text-muted text-center mt-4">
+                                                    2 days ago
+                                                </div>
+                                            </mdb-card-body>
+                                        </mdb-card>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <app-footer></app-footer>
+        </div>
+
+    </div>
+</div>

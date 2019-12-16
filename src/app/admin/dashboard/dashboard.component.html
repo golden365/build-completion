@@ -1,0 +1,87 @@
+<div class="container-fluid">
+    <div class="title col-lg-12">
+        <h3>Dashboard</h3>
+    </div>
+    <div class="list-group">
+        <ul class="list-inline">
+            <li class="list-inline-item col-md-3">
+                <mdb-card>
+                    <div class="row">
+                        <div class="col-xs-4" style="background: #3fd67b;">
+                            <span><i class="fa fa-users fa-2x fa-inverse"></i></span>
+                        </div>
+                        <div class="number">
+                            <h5>16</h5>
+                        </div>
+                        <div class="description">
+                            <h5>Service Providers</h5>
+                        </div>
+                    </div>
+                </mdb-card>
+            </li>
+            <li class="list-inline-item col-md-3">
+                <mdb-card>
+                    <div class="row">
+                        <div class="col-xs-4" style="background: #ffb61c;">
+                            <span><i class="fa fa-cogs fa-2x fa-inverse"></i></span>
+                        </div>
+                        <div class="number">
+                            <h5>5</h5>
+                        </div>
+                        <div class="description">
+                            <h5>Customers</h5>
+                        </div>
+                    </div>
+                </mdb-card>
+            </li>
+            <li class="list-inline-item col-md-3">
+                <mdb-card>
+                    <div class="row">
+                        <div class="col-xs-4" style="background: #e94b3b;">
+                            <span><i class="fa fa-reply fa-2x fa-inverse"></i></span>
+                        </div>
+                        <div class="number">
+                            <h5>6</h5>
+                        </div>
+                        <div class="description">
+                            <h5>Appointments</h5>
+                        </div>
+                    </div>
+                </mdb-card>
+            </li>
+            <li class="list-inline-item col-md-3">
+                <mdb-card>
+                    <div class="row">
+                        <div class="col-xs-4" style="background: #418bca;">
+                            <span><i class="fa fa-recycle fa-2x fa-inverse"></i></span>
+                        </div>
+                        <div class="number">
+                            <h5>571</h5>
+                        </div>
+                        <div class="description">
+                            <h5>Turnover</h5>
+                        </div>
+                    </div>
+                </mdb-card>
+            </li>
+            <li class="list-inline-item col-md-3">
+                <mdb-card>
+                    <div class="row">
+                        <div class="col-xs-4" style="background: #e79845;">
+                            <span><i class="fas fa-dollar-sign fa-2x fa-inverse"></i></span>
+                        </div>
+                        <div class="number">
+                            <h5>47</h5>
+                        </div>
+                        <div class="description">
+                            <h5>Revenue($)</h5>
+                        </div>
+                    </div>
+                </mdb-card>
+            </li>
+        </ul>
+    </div>
+    <agm-map [latitude]="latitude" [longitude]="longitude" style="height: 300px" (mapClick)="placeMarker($event)">
+        <agm-marker *ngFor="let marker of markers" [latitude]="marker.latitude" [longitude]="marker.longitude"></agm-marker>
+    </agm-map>
+</div>

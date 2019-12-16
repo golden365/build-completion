@@ -1,0 +1,87 @@
+<div id="page-wrapper">
+    <div ui-view class="ng-scope">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <div class="head row">
+                    <label><h4><span> Listing Views </span></h4></label>
+                    <label>
+                        <button mat-button [matMenuTriggerFor]="menu">Add Filter &nbsp;<i class="fas fa-angle-down"></i>
+                        </button>
+                        <mat-menu #menu="matMenu">
+                            <button mat-menu-item> User </button>
+                            <button mat-menu-item> Listing Owner </button>
+                        </mat-menu>
+                    </label>
+                </div>
+            </div>
+            <div class="md-form">
+                <input mdbInput type="text" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <table id="listingview" class="container">
+                    <thead>
+                    <tr>
+                        <th>
+                            <input type="checkbox" ng-model="all">
+                        </th>
+                        <th>ID</th>
+                        <th>Email</th>
+                        <th>Listing Title</th>
+                        <th>Listing Location</th>
+                        <th>Views</th>
+                        <th>Favorites</th>
+                        <th>Completed Bookings</th>
+                        <th>Photos</th>
+                        <th>Response Rate(%)</th>
+                        <th>Status</th>
+                        <th>Total Earned Amount</th>
+                        <th>Site Revenue</th>
+                        <th>Avg Rating</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let data of employees?.data">
+                        <td>
+                            <input type="checkbox" ng-checked="all">
+                        </td>
+                        <td>
+                            {{data.id}}
+                        </td>
+                        <td>
+                            {{data.username}}<br>
+                            <i class="fas fa-envelope-open-text"></i><br>
+                            {{data.email}}<br>
+                            {{data.phone_number}}
+                        </td>
+                        <td>{{data.category}}</td>
+                        <th>Listing Location</th>
+                        <th>Views</th>
+                        <th>Favorites</th>
+                        <th>Completed Bookings</th>
+                        <th>Photos</th>
+                        <th>Response Rate(%)</th>
+                        <th>Status</th>
+                        <th>Total Earned Amount</th>
+                        <th>Site Revenue</th>
+                        <th>Avg Rating</th>
+                        <td>
+                            <a [routerLink]="['/admin/edit']" [routerLinkActive]="['router-link-active']">
+                                <i class="fas fa-pen" mdbWavesEffect></i>
+                            </a>
+                            <a [routerLink]="['/admin/view']" [routerLinkActive]="['router-link-active']">
+                                <i class="fas fa-eye" style="color: #000;" mdbWavesEffect></i>
+                            </a>
+                            <a [routerLink]="['/admin/remove']" [routerLinkActive]="['router-link-active']">
+                                <i class="fas fa-trash-alt" mdbWavesEffect></i>
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

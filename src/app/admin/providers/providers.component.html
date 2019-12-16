@@ -1,0 +1,52 @@
+<div id="page-wrapper">
+    <div ui-view class="ng-scope">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4><span> Providers </span></h4>
+            </div>
+            <div class="md-form">
+                <input mdbInput type="text" class="form-control">
+            </div>
+            <div class="col-xs-12">
+                <table id="contacts" class="container">
+                    <thead>
+                    <tr>
+                        <th>
+                            <input type="checkbox" ng-model="all">
+                        </th>
+                        <th>ID</th>
+                        <th> Name</th>
+                        <th> Secret Key</th>
+                        <th>Api Key</th>
+                        <th>Active</th>
+                        <th>Display Order</th>
+                        <th>Created On</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <input type="checkbox" ng-checked="all">
+                        </td>
+                        <td>{{data.id}}</td>
+                        <td>Name</td>
+                        <td>{{data.phoneNumber}}</td>
+                        <td>Api Key</td>
+                        <td>Active</td>
+                        <td>Display order</td>
+                        <td>{{data.date}}</td>
+                        <td><a [routerLink]="['/admin/edit']" [routerLinkActive]="['router-link-active']">
+                            <i class="fas fa-pen" mdbWavesEffect></i>
+                        </a>
+                            <a [routerLink]="['/admin/view']" [routerLinkActive]="['router-link-active']">
+                                <i class="fas fa-eye" style="color: #000;" mdbWavesEffect></i>
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

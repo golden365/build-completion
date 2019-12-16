@@ -1,0 +1,61 @@
+<div class="container col-10">
+    <div class="col-sm-3">
+        <a [routerLink]="['/admin/list']" [routerLinkActive]="['router-link-active']" class="nav-link">
+            <button type="button" mdbBtn color="success" mdbWavesEffect><i class="fas fa-list"></i>&nbsp; List </button>
+        </a>
+    </div>
+    <form class="form-group">
+        <mat-form-field>
+            <mat-label>Role</mat-label>
+            <mat-select disableRipple>
+                <mat-option value="1">Admin</mat-option>
+                <mat-option value="2">Customer</mat-option>
+                <mat-option value="2">Service Provider</mat-option>
+                <mat-option value="2">User</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div class="md-form">
+            <input mdbInput placeholder="First Name" type="text" id="form53" class="form-control">
+        </div>
+        <div class="md-form">
+            <input mdbInput placeholder="Last Name" type="text" id="form54" class="form-control">
+        </div>
+        <div class="md-form">
+            <input mdbInput placeholder="Email" type="text" id="form55" class="form-control">
+        </div>
+        <div class="md-form">
+            <input mdbInput placeholder="Password" type="text" id="form56" class="form-control">
+        </div>
+        <mat-form-field>
+            <mat-label>Active?</mat-label>
+            <mat-select disableRipple>
+                <mat-option value="1">Yes</mat-option>
+                <mat-option value="2">No</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Email Confirmed?</mat-label>
+            <mat-select disableRipple>
+                <mat-option value="1">Yes</mat-option>
+                <mat-option value="2">No</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Category</mat-label>
+            <mat-select disableRipple>
+                <mat-option value="1">Yes</mat-option>
+                <mat-option value="2">No</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Mobile Number Confirmed</mat-label>
+            <mat-select disableRipple>
+                <mat-option value="1">Yes</mat-option>
+                <mat-option value="2">No</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div class="col-md-3">
+            <button type="button" mdbBtn color="success" (click)="alert($event)" mdbWavesEffect><i class="fas fa-check"></i>&nbsp;Submit</button>
+        </div>
+    </form>
+</div>

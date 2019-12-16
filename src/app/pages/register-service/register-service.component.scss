@@ -1,0 +1,82 @@
+mdb-card {
+  width: 50rem;
+  background-size: cover;
+  margin: 10% auto 5% auto;
+}
+mdb-card .text-center h3 {
+  margin-bottom: 10px;
+  border-bottom: 2px solid #00C851;
+}
+button {
+  border-radius: 30px;
+}
+.form-dark .font-small {
+  font-size: 0.8rem;
+}
+form {
+  display: flex;
+}
+.form-dark [type="radio"]+label,
+.form-dark [type="checkbox"]+label {
+  font-size: 0.8rem;
+}
+
+.form-dark [type="radio"]+label:before {
+  top: 2px;
+  width: 15px;
+  height: 15px;
+}
+
+.form-dark .md-form label {
+  color: #fff;
+}
+.form-dark input[type="radio"]+label:before {
+  cursor: pointer;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  z-index: 0;
+  border: none;
+  border-radius: 1px;
+  margin-top: 2px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.form-dark .form-check label {
+  cursor: pointer;
+  font-size: 16px;
+  font-family: Roboto, sans-serif;
+}
+.form-dark h4 {
+  font-size: 24px;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+.form-dark {
+  display: flex;
+}
+.form-dark input[type="radio"]:checked+label:before {
+  cursor: pointer;
+  top: -4px;
+  left: -3px;
+  width: 12px;
+  height: 22px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: transparent #00c851 #00c851 transparent;
+  -webkit-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  transform: rotate(40deg);
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+}
+@media (max-width: 580px) {
+  mdb-card {
+    width: 22rem;
+  }
+}

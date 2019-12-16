@@ -1,0 +1,13 @@
+<div class="container">
+    <mdb-card class="col-md">
+        <h3> Are you sure? </h3>
+        <div class="links" style="display: flex; margin: auto;">
+            <a ng-click="deleteUser(row.ID, $index)" class="nav-link">
+                <button type="button" mdbBtn color="danger" mdbWavesEffect>YES</button>
+            </a>
+            <a [routerLink]="['/admin/edit']" [routerLinkActive]="['router-link-active']" class="nav-link">
+                <button type="button" mdbBtn color="light" mdbWavesEffect>NO</button>
+            </a>
+        </div>
+    </mdb-card>
+</div>

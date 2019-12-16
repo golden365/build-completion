@@ -1,0 +1,216 @@
+<ng2-slim-loading-bar color="blue"></ng2-slim-loading-bar>
+<app-header></app-header>
+<router-outlet>
+</router-outlet>
+
+<div class="banner"></div>
+<div class="search-container container-fluid">
+    <h1>Your Service Expert</h1>
+    <h2>Get instant access to reliable and affordable services</h2>
+    <div class="search-group justify-content-center">
+        <div class="form-group form-inline">
+            <div class="search-list" textarea="text">
+                <select class="search-service custom-select">
+                    <option value="service">Service</option>
+                    <option value="painter">Painter</option>
+                    <option value="Tourist Guide">Tourist Guide</option>
+                    <option value="dog-care">Dog Day Care</option>
+                    <option value="dog-care">Dog Walking</option>
+                    <option value="dog-care">Baby Sitter</option>
+                    <option value="dog-care">Nanny</option>
+                    <option value="dog-care">Dog Boarding</option>
+                    <option value="dog-care">Elder Care</option>
+                    <option value="dog-care">Ophthalmologist</option>
+                    <option value="dog-care">Dieticians and Nutritionist</option>
+                    <option value="dog-care">Physiotherapy</option>
+                    <option value="dog-care">House keeping</option>
+                    <option value="dog-care">Security Offer</option>
+                </select>
+            </div>
+            <input type="text" placeholder="Search by City" class="search-city">
+            <input type="button" value="SEARCH" class="btn btn-warning btn-rounded">
+        </div>
+    </div>
+</div>
+<div class="service-list">
+    <ul class="list-inline space no-mar text-center">
+        <li class="list-inline-item text-center">
+            <a>
+                <div>
+                    <span><i class="fa fa-paw fa-2x"></i></span>
+                </div>
+                <h5>Dog Care<br></h5>
+            </a>
+        </li>
+        <li class="list-inline-item text-center">
+            <a>
+                <div>
+                    <span><i class="fa fa-child fa-2x"></i></span>
+                </div>
+                <h5>Baby and Elder Care</h5>
+            </a>
+        </li>
+        <li class="list-inline-item text-center">
+            <a>
+                <div>
+                    <span><i class="fa fa-users fa-2x"></i></span>
+                </div>
+                <h5>Worker and Assistant</h5>
+            </a>
+        </li>
+        <li class="list-inline-item text-center">
+            <a>
+                <div>
+                    <span><i class="fa fa-user-md fa-2x"></i></span>
+                </div>
+                <h5>Health Care and Welness</h5>
+            </a>
+        </li>
+        <li class="list-inline-item text-center">
+            <a>
+                <div>
+                    <span><i class="fa fa-user-md fa-2x"></i></span>
+                </div>
+                <h5> PLOMERO </h5>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="book-appmt space">
+    <div class="container recommend-service">
+        <h3 class="text-center"><span>recommend services</span></h3>
+        <div class="row">
+            <ul class="list-unstyled col-sm-12 col-md-6 col-xs-12">
+                <li class="text-center ng-scope">
+                    <a [routerLink]="['/pages/users']" [routerLinkActive]="['router-link-active']">
+                        <div class="doctor-list bor-rad-0 pr" mdbWavesEffect>
+                            <img src="../../../assets/images/large_thumb/Service/dog.png" alt="dog.png">
+                            <p class="text-left text-b no-mar ng-binding">Dog Walking</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="col-sm-12 col-md-6 list-unstyled">
+                <div class="row">
+                    <li class="text-center slide col-sm-6 col-md-6 col-xs-12 no-pad ng-scope">
+                        <a>
+                            <div class="doctor-list bor-rad-0 pr">
+                                <img src="../../../assets/images/large_thumb/Service/baby.png" alt="baby.png">
+                                <p class="text-left text-b no-mar ng-binding">Baby Sitter</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="text-center slide col-sm-6 col-md-6 col-xs-12 no-pad ng-scope">
+                        <a>
+                            <div class="doctor-list bor-rad-0 pr">
+                                <img src="../../../assets/images/large_thumb/Service/tutors.png" alt="tutors.png">
+                                <p class="text-left text-b no-mar ng-binding">Tutors</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="text-center slide col-sm-6 col-md-6 col-xs-12 no-pad ng-scope">
+                        <a>
+                            <div class="doctor-list bor-rad-0 pr">
+                                <img src="../../../assets/images/large_thumb/Service/elder.png" alt="elder.png">
+                                <p class="text-left text-b no-mar ng-binding">Elder Care</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="text-center slide col-sm-6 col-md-6 col-xs-12 no-pad ng-scope">
+                        <a>
+                            <div class="doctor-list bor-rad-0 pr">
+                                <img src="../../../assets/images/large_thumb/Service/dueticians.png"
+                                     alt="dueticians.png">
+                                <p class="text-left text-b no-mar ng-binding">Dieticians and Nutritionists</p>
+                            </div>
+                        </a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <div class="container dog-service">
+        <h3><span>DOG CARE</span></h3>
+        <ul class="list-inline space no-mar text-center">
+            <li class="list-inline-item">
+                <img src="../../../assets/images/large_thumb/Service/dog_day.png" alt="DOG DAY">
+            </li>
+            <li class="list-inline-item">
+                <img src="../../../assets/images/large_thumb/Service/dog.png" alt="DOG">
+            </li>
+            <li class="list-inline-item">
+                <img src="../../../assets/images/large_thumb/Service/dog_boarding.png" alt="DOG BOARDING">
+            </li>
+        </ul>
+    </div>
+    <div class="container baby-container">
+        <h3><span>baby and elder care</span></h3>
+        <ul class="list-inline space no-mar text-center">
+            <li class="list-inline-item">
+                <img src="../../../assets/images/large_thumb/Service/baby.png" alt="baby.png">
+            </li>
+            <li class="list-inline-item">
+                <img src="../../../assets/images/large_thumb/Service/nany.png" alt="nany.png">
+            </li>
+            <li class="list-inline-item">
+                <img src="../../../assets/images/large_thumb/Service/tutors.png" alt="tutors.png">
+            </li>
+            <li class="list-inline-item">
+                <img src="../../../assets/images/large_thumb/Service/elder.png" alt="elder.png">
+            </li>
+        </ul>
+    </div>
+    <div class="container worker-container">
+        <h3><span>worker and assistant</span></h3>
+        <ul class="list-inline space no-mar text-center">
+            <li class="list-inline-item">
+                <img src="../../../assets/images/large_thumb/Service/painter.png" alt="painter.png">
+            </li>
+            <li class="list-inline-item">
+                <img src="../../../assets/images/large_thumb/Service/tourist_guide.png" alt="painter.png">
+            </li>
+            <li class="list-inline-item">
+                <img src="../../../assets/images/large_thumb/Service/house_keeping.png" alt="house.png">
+            </li>
+            <li class="list-inline-item">
+                <img src="../../../assets/images/large_thumb/Service/security.png" alt="security.png">
+            </li>
+        </ul>
+    </div>
+    <div class="container health-container">
+        <h3><span>health care and wellness</span></h3>
+        <ul class="list-inline space no-mar text-center">
+            <li class="list-inline-item">
+                <img src="../../../assets/images/large_thumb/Service/orthopaedics.png" alt="orthopaedics.png">
+            </li>
+            <li class="list-inline-item">
+                <img src="../../../assets/images/large_thumb/Service/ophthalmologist.png" alt="ophthamologist">
+            </li>
+            <li class="list-inline-item">
+                <img src="../../../assets/images/large_thumb/Service/dueticians.png" alt="dueticians.png">
+            </li>
+            <li class="list-inline-item">
+                <img src="../../../assets/images/large_thumb/Service/physiotherapy.png" alt="physiotherapy.png">
+            </li>
+        </ul>
+    </div>
+    <div class="container slider-container">
+        <h3><span>customer reviews</span></h3>
+        <mdb-carousel [animation]="'slide'">
+            <mdb-carousel-item>
+                <img class="d-block w-100" src="../../../assets/images/customer1.png" alt="First slide">
+            </mdb-carousel-item>
+            <mdb-carousel-item>
+                <img class="d-block w-100" src="../../../assets/images/customer2.png" alt="Second slide">
+            </mdb-carousel-item>
+            <mdb-carousel-item>
+                <img class="d-block w-100" src="../../../assets/images/customer3.png" alt="Third slide">
+            </mdb-carousel-item>
+        </mdb-carousel>
+    </div>
+</div>
+<app-footer></app-footer>
+
+
+
+

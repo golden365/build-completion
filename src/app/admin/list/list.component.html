@@ -1,0 +1,52 @@
+<div id="page-wrapper">
+    <div ui-view class="ng-scope">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4><span> Users </span></h4>
+                <div class="col-sm-3 col-lg-4">
+                    <a [routerLink]="['/admin/addnewuser']" [routerLinkActive]="['router-link-active']"
+                       class="nav-link">
+                        <button type="button" mdbBtn color="success" mdbWavesEffect><i class="fas fa-plus"></i>&nbsp;Create
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <label>
+            </label>
+            <div class="col-lg-12">
+                <table id="serviceprovider" class="container">
+                    <thead>
+                    <tr>
+                        <th>
+                            <input type="checkbox" ng-model="all">
+                        </th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Mobile Number</th>
+                        <th>Logins</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let data of employees?.data">
+                        <td>
+                            <input type="checkbox" ng-checked="all">
+                        </td>
+                        <td>
+                            {{data.id}}
+                        </td>
+                        <td>
+                            {{data.username}}<br>
+                        </td>
+                        <td>{{data.email}}</td>
+                        <td>{{data.phone_number}}</td>
+                        <td>Logins</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
